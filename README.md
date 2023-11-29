@@ -1,9 +1,20 @@
-# DH307
-This is the pipeline for RNA-Seq Analysis.
-### Following steps are taken for analysis
-- RUN Fastqc for Quality Check
-- RUN Trimmomatic to trim reads with poor quality
-- RUN hisat2 for alignment
-- RUN featureCounts - Quantification
+# DH307 Research Project
+This repostry contains two pipelines for RNA-Seq Analysis.
 
-I got stucked at the featureCounts part, getting some error.
+## Pipeline1
+- Run Fastqc for Quality Check
+- Run Trimmomatic to trim reads with poor quality
+- Run hisat2 for alignment
+- Run StringTie for trnascript assembly
+- Run prepDE.py to generate count matrix
+- Run DESeq2 to create differential gene expression
+As the end results, we will get:
+- differential_genes.csv : differential genes
+- top10_genes.csv : top 10 genes arranged according to the increasing order of adjusted p-values(padj)
+- MA_plot : A plot of log-ratio of the fold change v/s mean average expression
+  
+## Pipeline2
+- Run Fastqc for Quality Check
+- Run TrimGalore to trim reads with poor quality
+- Run STAR aligner for alignment
+In this pipeline, I got stucked at the STAR aligner part, was not able to solve the error due to time constraints. So proceded for the analysis with Pipeline1
