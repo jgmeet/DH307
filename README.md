@@ -8,6 +8,7 @@ This repostry contains two pipelines for RNA-Seq Analysis.
 - Run StringTie for trnascript assembly
 - Run prepDE.py to generate count matrix
 - Run DESeq2 to create differential gene expression
+### End results
 As the end results, we will get:
 - differential_genes.csv : differential genes
 - top10_genes.csv : top 10 genes arranged according to the increasing order of adjusted p-values(padj)
@@ -17,4 +18,7 @@ As the end results, we will get:
 - Run Fastqc for Quality Check
 - Run TrimGalore to trim reads with poor quality
 - Run STAR aligner for alignment
-In this pipeline, I got stucked at the STAR aligner part, was not able to solve the error due to time constraints. So proceded for the analysis with Pipeline1
+In this pipeline, I got stucked at the STAR aligner part, was not able to solve the error due to time constraints.
+
+## Final Pipeline
+Due to some errors in Pipeline2, I proceded for the analysis with Pipeline1
